@@ -15,7 +15,7 @@ def encrypt(email="abc012"):
     len_flag = len(email) != 6
     anum_flag = email[:3] != 'abc' or email[3:] != '012' 
 
-    if len_flag =="Email must be 6 characters long.":
+    if len_flag == "Email must be 6 characters long.":
         Print(len_flag)        
     if anum_flag "Email must have 3 letters followed by 3 digits.":
         print(anum_flag)
