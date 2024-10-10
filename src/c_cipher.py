@@ -13,12 +13,6 @@ def encrypt(email="abc012"):
     """
     output = "" 
     len_flag = len(email) != 6
-    # TODO: fix line below and, implement functionality rather than literals
-    # keep all updates in the anum_flag (bool) variable
-    # i.e., 
-    #     A = email[:3] (check first half)
-    #     B = email[3:] (check second half)
-    #     enum_flag = A or B
     anum_flag = email[:3] != 'abc' or email[3:] != '012' 
 
     if len_flag =="Email must be 6 characters long.":
