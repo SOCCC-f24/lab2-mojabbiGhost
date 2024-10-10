@@ -41,15 +41,7 @@ def encrypt(email="abc012"):
     return retVal 
 
 def decrypt(email="def345"):
-    """
-    TODO: What is the objective? 
-
-    Args:
-        TODO: what arguments and data types are expected? (i.e., email)
-
-    Returns:
-        TODO: what varibale and data types are being returned?   
-    """
+    
     # input validation
     output = "" 
     len_flag = len(email) != 6
