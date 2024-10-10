@@ -40,7 +40,7 @@ def encrypt(email="abc012"):
     retVal = email_str
     return retVal 
 
-def decrypt(email="def345"):
+def decrypt(email="def345")
     
     # input validation
     output = "" 
