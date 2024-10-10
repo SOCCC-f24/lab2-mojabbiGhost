@@ -23,7 +23,7 @@ def encrypt(email="abc012"):
         print(output)
         
     # TODO: fix line below, process our string into a list
-    email_lst = ["a", "b", "c", "0", "1", "2"]
+    email_lst = list(email)
         
     # TODO: complete line(s) below, convert EACH new element into a string
     new_ascii = ord(email_lst[0]) + 3    
