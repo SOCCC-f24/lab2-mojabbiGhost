@@ -35,8 +35,8 @@ def encrypt(email="abc012"):
     #    email_str = " some string updates here "
     #    email_1 = email_str.strip()
     #    retVal = email_1
-    retVal = email_str
-    return retVal 
+    retval = email_str
+    return reval 
 
 def decrypt(email="def345"):
     """
@@ -71,5 +71,5 @@ def decrypt(email="def345"):
     #    email_str = " some string updates here "
     #    email_1 = email_str.strip()
     #    retVal = email_1
-    retVal = "aef345"
-    return retVal
+    retval = "aef345"
+    return retval
