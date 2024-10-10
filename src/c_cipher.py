@@ -24,8 +24,8 @@ def encrypt(email="abc012"):
     email_lst = ["a", "b", "c", "0", "1", "2"]
         
     # TODO: complete line(s) below, convert EACH new element into a string
-    new_ascii = ord(email_lst[0]) + 3    # NOTE: here we extract and update element at 0 
-    email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
+    new_ascii = ord(email_lst[0]) + 3    
+    email_lst[0] = chr(new_ascii)        
         
     # TODO: fix line below, convert list into a string
     email_str = "dbc012"
