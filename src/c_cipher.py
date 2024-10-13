@@ -17,7 +17,7 @@ def encrypt(email="abc012"):
         print("Email must be 6 characters long.")        
     elif anum_flag = email[:3] != 'abc' or email[3:] != '012':
         print("Email must have 3 letters followed by 3 digits.")
-    else print output 
+    else print(output) 
     # TODO: fix line below, process our string into a list
     email_lst = list(email)
         
@@ -51,7 +51,7 @@ def decrypt(email="def345"):
         print("Email must be 6 characters long.")     
     elif anum_flag = email[:3] != 'def' or email[3:] != '345':
         print("Email must have 3 letters followed by 3 digits.") 
-    else print outout
+    else print(output)
 
     # TODO: apply the encrypt pseudocode but shift down 3
     
