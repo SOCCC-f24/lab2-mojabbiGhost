@@ -47,7 +47,7 @@ def decrypt(email="def345"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
- len_flag = len(email) != 6
+ len_flag = len(email) 
  anum_flag = email[:3] != 'abc' or email[3:] != '012' 
     if len_flag == len(email) != 6:
         print("Email must be 6 characters long.")     
