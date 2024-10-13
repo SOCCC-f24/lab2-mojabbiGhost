@@ -11,9 +11,9 @@ def encrypt(email="abc012"):
     Returns:
         TODO: what varibale and data types are being returned?   
     """
-    output = "" 
+    output = ""     
 
-    if len_flag len_flag = len(email) != 6:
+    if len_flag = len(email) != 6:
         print("Email must be 6 characters long.")        
     elif anum_flag = email[:3] != 'abc' or email[3:] != '012':
         print("Email must have 3 letters followed by 3 digits.")
