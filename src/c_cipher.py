@@ -7,6 +7,7 @@ def encrypt(email="abc012"):
     anum_flag = email[:3] != 'abc' or email[3:] != '012' 
 
     email_lst = ["a", "b", "c", "0", "1", "2"]
+    email_str = string(email_lst)
     # TODO: complete line(s) below, convert EACH new element into a string
     new_ascii = ord(email_lst[0]) + 3    
     email_lst[0] = chr(new_ascii)        
