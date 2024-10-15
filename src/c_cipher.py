@@ -19,14 +19,15 @@ def encrypt(email="abc012"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = email[:3] != 'def' or email[3:] != '345' 
-    if len_flag:                         # NOTE: here we provide input validation on length
-        a = email != 6
-        print("length check")
-    if anum_flag:                        # NOTE: here we provide input validation on alpha/nu
-        b = email[:3] != 'abc' or email[3:] !='012'
-        print("alpha/num check")
-        
+    anum_flag = email[:3] != 'abc' or email[3:] != '012' 
+    if len_flag !=6:
+        print("length check failed\n")
+    elif anum_flag[:3] !='abc':
+        print("alpha num check failed\n")
+    elif anum_flag[3:] != '012':
+        print("alpha num check failed\n")
+    else:
+        return output
     # TODO: fix line below, process our string into a list
     email_lst = ["a", "b", "c", "0", "1", "2"]
         
@@ -57,7 +58,7 @@ def decrypt(email="def345"):
     """
     # input validation
     output = "" 
-    len_flag = len(email) != 6
+    len_flag = len(email) != 6 
     # TODO: fix line below and, implement functionality rather than literals
     # keep all updates in the anum_flag (bool) variable
     # i.e., 
@@ -66,17 +67,14 @@ def decrypt(email="def345"):
     #     enum_flag = A or B
     anum_flag = email[:3] != 'def' or email[3:] != '345' 
 
-    if len_flag:                         # NOTE: here we provide input validation on length
-        output = "Length check failed\n"
-        output += "Email must be 6 characters long."
-        logging.info(output)
-        return output        
-    if anum_flag:                        # NOTE: here we provide input validation on alpha/num
-        output = "alpha num check failed\n"
-        output += "Email must have 3 letters followed by 3 digits."
-        logging.info(output)
-        return output   
-
+    if len_flag !=6:
+        print("length check failed\n")
+    elif anum_flag[:3] != 'def':
+        print("alpha num check failed\n")
+    elif anum_flag[3:] !=' 345':
+        print("alpha num check failed\n")
+    else:
+        return output
     # TODO: apply the encrypt pseudocode but shift down 3
     
     # keep all updates in the retVal (str) variablei
