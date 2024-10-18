@@ -20,11 +20,11 @@ def encrypt(email="abc012"):
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
     anum_flag = email[:3] != 'abc' or email[3:] != '012' 
-    if len_flag !=6:
+    if len_flag:
         print("length check failed\n")
-    elif anum_flag[:3] !='abc':
+    elif anum_flag:
         print("alpha num check failed\n")
-    elif anum_flag[3:] != '012':
+    elif anum_flag:
         print("alpha num check failed\n")
     else:
         return output
@@ -67,11 +67,11 @@ def decrypt(email="def345"):
     #     enum_flag = A or B
     anum_flag = email[:3] != 'def' or email[3:] != '345' 
 
-    if len_flag !=6:
+    if len_flag:
         print("length check failed\n")
-    elif anum_flag[:3] != 'def':
+    elif anum_flag:
         print("alpha num check failed\n")
-    elif anum_flag[3:] !=' 345':
+    elif anum_flag:
         print("alpha num check failed\n")
     else:
         return output
