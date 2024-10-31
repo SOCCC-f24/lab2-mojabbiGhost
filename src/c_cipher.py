@@ -24,19 +24,27 @@ def encrypt(email="abc012"):
         print("length check failed\n")
     elif anum_flag:
         print("alpha num check failed\n")
-    elif anum_flag:
-        print("alpha num check failed\n")
-    else:
-        return output
+
     # TODO: fix line below, process our string into a list
-    email_lst = ["a", "b", "c", "0", "1", "2"]
+    email_lst = [email[0], email[1], email[2], email[3], email[4], email[5]]
         
     # TODO: complete line(s) below, convert EACH new element into a string
-    new_ascii = ord(email_lst[0]) + 3    # NOTE: here we extract and update element at 0 
-    email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
+    new_ascii = ord(email_lst[0]) + 3    
+    email_lst[0] = chr(new_ascii)  
+    new_ascii = ord(email_lst[1]) + 3    
+    email_lst[1] = chr(new_ascii) 
+    new_ascii = ord(email_lst[2]) + 3    
+    email_lst[2] = chr(new_ascii) 
+    new_ascii = ord(email_lst[3]) + 3
+    email_lst[3] = chr(new_ascii)
+    new_ascii = ord(email_lst[4]) + 3    
+    email_lst[4] = chr(new_ascii) 
+    new_ascii = ord(email_lst[5]) + 3    
+    email_lst[5] = chr(new_ascii) 
+    
         
     # TODO: fix line below, convert list into a string
-    email_str = "dbc012"
+    email_str = "".join(email_lst)
 
     # keep all updates in the retVal (str) variablei
     # i.e.,
@@ -71,10 +79,7 @@ def decrypt(email="def345"):
         print("length check failed\n")
     elif anum_flag:
         print("alpha num check failed\n")
-    elif anum_flag:
-        print("alpha num check failed\n")
-    else:
-        return output
+    
     # TODO: apply the encrypt pseudocode but shift down 3
     
     # keep all updates in the retVal (str) variablei
