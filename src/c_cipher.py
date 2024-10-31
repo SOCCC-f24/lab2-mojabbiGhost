@@ -19,7 +19,7 @@ def encrypt(email="abc012"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = email[:3] != 'abc' or email[3:] != '012' 
+    anum_flag = '^[a-zA-Z]{3}[0-9]{3}$' 
     if len_flag:
         print("length check failed\n")
     elif anum_flag:
@@ -73,12 +73,12 @@ def decrypt(email="def345"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = email[:3] != 'def' or email[3:] != '345' 
+    anum_flag = '^[a-zA-Z]{3}[0-9]{3}$'  
 
     if len_flag:
         print("length check failed\n")
     elif anum_flag:
-        print("alpha num check failed\n")
+        print("alpha num check \n")
     
     # TODO: apply the encrypt pseudocode but shift down 3
     
