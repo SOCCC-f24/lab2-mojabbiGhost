@@ -19,7 +19,7 @@ def encrypt(email="abc012"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = '^[a-zA-Z]{3}[0-9]{3}$' 
+    anum_flag =  email[3].isalpha() and email[:3].isdecmial()
     if len_flag:
         print("length check failed\n")
     elif anum_flag:
@@ -73,19 +73,30 @@ def decrypt(email="def345"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = '^[a-zA-Z]{3}[0-9]{3}$'  
+    anum_flag = email[3].isalpha() and email[:3].isdecmial()
 
     if len_flag:
         print("length check failed\n")
-    elif anum_flag:
+    
+    email_lst = [email[0], email[1], email[2], email[3], email[4], email[5]]
+    
+    
+    new_ascii = ord(email_lst[0]) - 3    
+    email_lst[0] = chr(new_ascii)  
+    new_ascii = ord(email_lst[1]) - 3    
+    email_lst[1] = chr(new_ascii) 
+    new_ascii = ord(email_lst[2]) - 3    
+    email_lst[2] = chr(new_ascii) 
+    new_ascii = ord(email_lst[3]) - 3
+    email_lst[3] = chr(new_ascii)
+    new_ascii = ord(email_lst[4]) - 3    
+    email_lst[4] = chr(new_ascii) 
+    new_ascii = ord(email_lst[5]) - 3    
+    email_lst[5] = chr(new_ascii) 
+    
+    if anum_flag:
         print("alpha num check \n")
-    
-    # TODO: apply the encrypt pseudocode but shift down 3
-    
-    # keep all updates in the retVal (str) variablei
-    # i.e.,
-    #    email_str = " some string updates here "
-    #    email_1 = email_str.strip()
-    #    retVal = email_1
-    retVal = "aef345"
-    return retVal
+    else:
+        return "".join(email_lst)
+
+
