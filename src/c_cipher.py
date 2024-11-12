@@ -21,11 +21,13 @@ def encrypt(email="abc012"):
     #     enum_flag = A or B
     anum_flag =  email[3].isalpha() and email[:3].isdecmial()
     if len_flag:
-        output += ("length check failed\n")
+        output += ("Length check failed\n")
+        output += 'Email must be 6 characters long.'
         logging.info(output)
         return output  
     elif anum_flag:
         output += ("alpha num check failed\n")
+        output += 'Email must have 3 letters followed by 3 digits.'
         logging.info(output)
         return output
     # TODO: fix line below, process our string into a list
@@ -79,7 +81,8 @@ def decrypt(email="def345"):
     anum_flag = email[3].isalpha() and email[:3].isdecmial()
 
     if len_flag:
-        output += ("length check failed\n")
+        output += ("Length check failed\n")
+        output += 'Email must be 6 characters long.'
         logging.info(output)
         return output 
     
@@ -101,7 +104,8 @@ def decrypt(email="def345"):
     
     if anum_flag:
        output += ("alpha num check \n")
-       logging.info(output)
+       output += 'Email must have 3 letters followed by 3 digits.'
+        logging.info(output)
        return output
     else:
         output +=  "".join(email_lst)
