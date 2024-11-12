@@ -105,7 +105,7 @@ def decrypt(email="def345"):
     if anum_flag:
        output += ("alpha num check \n")
        output += 'Email must have 3 letters followed by 3 digits.'
-        logging.info(output)
+       logging.info(output)
        return output
     else:
         output +=  "".join(email_lst)
