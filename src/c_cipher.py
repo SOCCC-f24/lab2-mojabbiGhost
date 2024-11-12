@@ -21,10 +21,13 @@ def encrypt(email="abc012"):
     #     enum_flag = A or B
     anum_flag =  email[3].isalpha() and email[:3].isdecmial()
     if len_flag:
-        return("length check failed\n")
+        output += ("length check failed\n")
+        logging.info(output)
+        return output  
     elif anum_flag:
-        return("alpha num check failed\n")
-
+        output += ("alpha num check failed\n")
+        logging.info(output)
+        return output
     # TODO: fix line below, process our string into a list
     email_lst = [email[0], email[1], email[2], email[3], email[4], email[5]]
         
@@ -76,7 +79,9 @@ def decrypt(email="def345"):
     anum_flag = email[3].isalpha() and email[:3].isdecmial()
 
     if len_flag:
-        return("length check failed\n")
+        output += ("length check failed\n")
+        logging.info(output)
+        rerturn output 
     
     email_lst = [email[0], email[1], email[2], email[3], email[4], email[5]]
     
@@ -95,8 +100,11 @@ def decrypt(email="def345"):
     email_lst[5] = chr(new_ascii) 
     
     if anum_flag:
-        print("alpha num check \n")
+       output += ("alpha num check \n")
+       logging.info(output)
+       return output
     else:
-        return "".join(email_lst)
+        output +=  "".join(email_lst)
+        return output
 
 
