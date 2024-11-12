@@ -81,7 +81,7 @@ def decrypt(email="def345"):
     if len_flag:
         output += ("length check failed\n")
         logging.info(output)
-        rerturn output 
+        return output 
     
     email_lst = [email[0], email[1], email[2], email[3], email[4], email[5]]
     
