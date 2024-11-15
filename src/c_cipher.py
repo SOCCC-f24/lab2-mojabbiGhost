@@ -19,13 +19,13 @@ def encrypt(email="abc012"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag =  email[3:].isalpha() and email[:3].isdecimal()
+    anum_flag =  email[:3].isalpha() and email[3:].isdecimal()
     if len_flag:
         output += ("Length check failed\n")
         output += 'Email must be 6 characters long.'
         logging.info(output)
         return output  
-    elif anum_flag:
+    elif not anum_flag:
         output += ("alpha num check failed\n")
         output += 'Email must have 3 letters followed by 3 digits.'
         logging.info(output)
@@ -78,7 +78,7 @@ def decrypt(email="def345"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = email[3:].isalpha() and email[:3].isdecimal()
+    anum_flag = email[:3].isalpha() and email[3:].isdecimal()
 
     if len_flag:
         output += ("Length check failed\n")
@@ -102,7 +102,7 @@ def decrypt(email="def345"):
     new_ascii = ord(email_lst[5]) - 3    
     email_lst[5] = chr(new_ascii) 
     
-    if anum_flag:
+    if not anum_flag:
        output += ("alpha num check \n")
        output += 'Email must have 3 letters followed by 3 digits.'
        logging.info(output)
