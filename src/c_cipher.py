@@ -5,12 +5,11 @@ def encrypt(email="abc012"):
    
     output = "" 
     len_flag = len(email) != 6
-    # TODO: fix line below and, implement functionality rather than literals
-    # keep all updates in the anum_flag (bool) variable
-    # i.e., 
-    #     A = email[:3] (check first half)
-    #     B = email[3:] (check second half)
-    #     enum_flag = A or B
+    # Implemented functionality rather than literals
+    # kept all values in the anum_flag (bool) variable
+    # kept len_flag for charatcer size check
+    #   used anum_flag for email[:3] (check first half) and email[3:] (check second half)
+    
     anum_flag =  email[:3].isalpha() and email[3:].isdecimal()
     if len_flag:
         output += ("Length check failed\n")
@@ -22,11 +21,12 @@ def encrypt(email="abc012"):
         output += 'Email must have 3 letters followed by 3 digits.'
         logging.info(output)
         return output
-    # TODO: fix line below, process our string into a list
+    # Assigned each index with literals 
     email_lst = [email[0], email[1], email[2], email[3], email[4], email[5]]
-        
-    # TODO: complete line(s) below, convert EACH new element into a string
-    new_ascii = ord(email_lst[0]) + 3    
+      
+   # assigned each index in email with literal to decrpty below using -3 shift ord and chr function.
+   
+   new_ascii = ord(email_lst[0]) + 3    
     email_lst[0] = chr(new_ascii)  
     new_ascii = ord(email_lst[1]) + 3    
     email_lst[1] = chr(new_ascii) 
@@ -40,14 +40,11 @@ def encrypt(email="abc012"):
     email_lst[5] = chr(new_ascii) 
     
         
-    # TODO: fix line below, convert list into a string
+    # converted list into a string and then join function back to string for decrypt
     email_str = "".join(email_lst)
 
-    # keep all updates in the retVal (str) variablei
-    # i.e.,
-    #    email_str = " some string updates here "
-    #    email_1 = email_str.strip()
-    #    retVal = email_1
+    # kept all updates in the retVal (str) variablei
+   
     retVal = email_str
     return retVal 
 
@@ -56,12 +53,7 @@ def decrypt(email="def345"):
     # input validation
     output = "" 
     len_flag = len(email) != 6 
-    # TODO: fix line below and, implement functionality rather than literals
-    # keep all updates in the anum_flag (bool) variable
-    # i.e., 
-    #     A = email[:3] (check first half)
-    #     B = email[3:] (check second half)
-    #     enum_flag = A or B
+    
     anum_flag = email[:3].isalpha() and email[3:].isdecimal()
 
     if len_flag:
@@ -71,7 +63,7 @@ def decrypt(email="def345"):
         return output 
     
     email_lst = [email[0], email[1], email[2], email[3], email[4], email[5]]
-    
+    # assigned each index in email with literal to decrpty below using -3 shift ord and chr function.
     
     new_ascii = ord(email_lst[0]) - 3    
     email_lst[0] = chr(new_ascii)  
