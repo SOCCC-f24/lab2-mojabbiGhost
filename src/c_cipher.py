@@ -26,7 +26,7 @@ def encrypt(email="abc012"):
       
    # assigned each index in email with literal to decrpty below using -3 shift ord and chr function.
    
-   new_ascii = ord(email_lst[0]) + 3    
+    new_ascii = ord(email_lst[0]) + 3    
     email_lst[0] = chr(new_ascii)  
     new_ascii = ord(email_lst[1]) + 3    
     email_lst[1] = chr(new_ascii) 
